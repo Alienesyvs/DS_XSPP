@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açık Mavi Web Sitesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('arkaplan.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            text-align: center;
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .language {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .copy-btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #007BB5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Problem Seçin</h1>
+    
+    <button class="button" onclick="showContent('content1')">Piyasemendeki çatlak</button>
+    <button class="button" onclick="showContent('content2')">M-0A-050 KOD+Kanal ölçümü yaparken turuncu ekran belirmiş M_09060 HATASI</button>
+    <button class="button" onclick="showContent('content3')">Error code: S 03009 MOTOR HATASI (Apex ölçüm) ve Piyasemen çatlak.</button>
+    <button class="button" onclick="showContent('content4')">APEX OWER HATASI ve Handpiece çatlağı</button>
+    <button class="button" onclick="showContent('content5')">M-0F004 hatası (kart hatası)</button>
+
+    <div id="content1" class="content">
+        <div class="language">
+            <div>
+                <h3>Türkçe Metin</h3>
+                <p id="turkish-text1">Motorlu el aleti incelemesi sırasında plastik kısımda çatlak gözlendi. Satın alma sonrasında benzer sorunlar başka müşteriler tarafından da bildirildiğinden sorunun kullanıcı hatasından kaynaklanmadığı belirlendi. Yapılan incelemede el aletinde herhangi bir darbe veya düşme izine rastlanmadı. Servis kılavuzuna göre 6752401'i değiştirmeyi planlıyoruz. Herhangi bir öneriniz veya tavsiyeniz var mı?</p>
+                <button class="copy-btn" onclick="copyText('turkish-text1')">Kopyala</button>
+            </div>
+            <div>
+                <h3>English Text</h3>
+                <p id="english-text1">A crack was observed in the plastic part during the motor handpiece inspection. Since similar issues were reported by other customers after purchase, it was determined that the problem was not due to user error. Upon investigation, no signs of impact or dropping were found on the handpiece. According to service manual, we're planning to replace 6752401. Do you recommend or advise anything?</p>
+                <button class="copy-btn" onclick="copyText('english-text1')">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content2" class="content">
+        <div class="language">
+            <div>
+                <h3>Türkçe Metin</h3>
+                <p id="turkish-text2">M-0A-050 ve M_09060 hataları nedeniyle cihazda testler yapılmıştır. Servis kılavuzuna göre 6808278 ve 6752401 numaralı parçaların değiştirilmesi gerektiği belirtilmiştir. Servis kılavuzuna göre 6808278 ve 6752401'i değiştirmeyi planlıyoruz. Herhangi bir öneriniz veya tavsiyeniz var mı?</p>
+                <button class="copy-btn" onclick="copyText('turkish-text2')">Kopyala</button>
+            </div>
+            <div>
+                <h3>English Text</h3>
+                <p id="english-text2">Tests have been conducted on the device due to M-0A-050 and M_09060 errors. Due to service manual, it is written to replace the parts with numbers 6808278 and 6752401. According to service manual, we're planning to replace 6808278 and 6752401. Do you recommend or advise anything?</p>
+                <button class="copy-btn" onclick="copyText('english-text2')">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content3" class="content">
+        <div class="language">
+            <div>
+                <h3>Türkçe Metin</h3>
+                <p id="turkish-text3">Cihaz, işlem sırasında Apex ölçüm hatası gösteriyor ve S-03009 hata kodunu veriyor. Cihazın diğer bileşenleri test edildi ve servis kılavuzu talimatları gözden geçirildi. Sorunun 6808278 numaralı PCB ile ilgili olduğu belirlendi. Ayrıca, motorlu el aleti incelemesi sırasında plastik kısımda bir çatlak gözlendi. Satın alma sonrasında benzer sorunlar başka müşteriler tarafından da bildirildiğinden, sorunun kullanıcı hatasından kaynaklanmadığı belirlendi. Servis kılavuzuna göre 6808278 ve 6752401'i değiştirmeyi planlıyoruz. Herhangi bir öneriniz veya tavsiyeniz var mı?</p>
+                <button class="copy-btn" onclick="copyText('turkish-text3')">Kopyala</button>
+            </div>
+            <div>
+                <h3>English Text</h3>
+                <p id="english-text3">The device is displaying an Apex measurement error during operation and showing the S-03009 error code. Other components of the device have been tested, and the service manual instructions have been reviewed. It has been determined that the issue is related to the (6808278) PCB. Additionally, a crack was observed in the plastic part during the motor handpiece inspection. Since similar issues were reported by other customers after purchase, it was determined that the problem was not due to user error. According to service manual, we're planning to replace 6808278 and 6752401. Do you recommend or advise anything?</p>
+                <button class="copy-btn" onclick="copyText('english-text3')">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content4" class="content">
+        <div class="language">
+            <div>
+                <h3>Türkçe Metin</h3>
+                <p id="turkish-text4">Cihaz, işlem sırasında Apex ölçüm hatası gösteriyor ve "Apex Over" hatasını veriyor. Cihazın diğer bileşenleri test edildi ve servis kılavuzu talimatları gözden geçirildi. Sorunun PCB ile ilgili olduğu belirlendi. Ayrıca, 5:1 AL'deki kapak sorunu nedeniyle servis kılavuzuna göre 6794536 numaralı parçanın değiştirilmesi gerektiği belirtilmiştir. Yapılan incelemede, el aletinde darbe veya düşme izi bulunmamıştır. Servis kılavuzuna göre 6808278 ve 6794536'yı değiştirmeyi planlıyoruz. Herhangi bir öneriniz veya tavsiyeniz var mı?</p>
+                <button class="copy-btn" onclick="copyText('turkish-text4')">Kopyala</button>
+            </div>
+            <div>
+                <h3>English Text</h3>
+                <p id="english-text4">The device is displaying an Apex measurement error during operation and showing the "Apex Over". Other components of the device have been tested, and the service manual instructions have been reviewed. It has been determined that the issue is related to the PCB. Due to a cover issue with the 5:1 AL, service manual recommends replacing part number 6794536. Upon investigation, no signs of impact or dropping were found on the handpiece. According to service manual, we're planning to replace 6808278 and 6794536. Do you recommend or advise anything?</p>
+                <button class="copy-btn" onclick="copyText('english-text4')">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content5" class="content">
+        <div class="language">
+            <div>
+                <h3>Türkçe Metin</h3>
+                <p id="turkish-text5">Cihaz, işlem sırasında M-0F004 hata kodunu gösteriyor. Cihazın diğer bileşenleri test edildi ve servis kılavuzu talimatları gözden geçirildi. Sorunun PCB ile ilgili olduğu belirlendi. Servis kılavuzuna göre 6808278 numaralı parçanın değiştirilmesi gerektiği belirtilmiştir. Servis kılavuzuna göre 6808278'i değiştirmeyi planlıyoruz. Herhangi bir öneriniz veya tavsiyeniz var mı?</p>
+                <button class="copy-btn" onclick="copyText('turkish-text5')">Kopyala</button>
+            </div>
+            <div>
+                <h3>English Text</h3>
+                <p id="english-text5">The device is displaying the M-0F004 error code during operation. Other components of the device have been tested, and the service manual instructions have been reviewed. It has been determined that the issue is related to the PCB. According to service manual, we're planning to replace 6808278. Do you recommend or advise anything?</p>
+                <button class="copy-btn" onclick="copyText('english-text5')">Copy</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showContent(contentId) {
+        var contents = document.querySelectorAll('.content');
+        contents.forEach(content => content.style.display = 'none');
+        document.getElementById(contentId).style.display = 'block';
+    }
+
+    function copyText(elementId) {
+        var text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Metin kopyalandı!');
+        });
+    }
+</script>
+
+</body>
+</html>
